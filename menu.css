@@ -1,0 +1,55 @@
+:root {
+    /*  CUSTOM COLORS - cc  */
+    --color-black: #161616;
+    --color-white: #fff;
+    --color-grey: #e5e5e5;
+    --color-orange: #fca311;
+    --color-navy: #14213d;
+    --color-dark: #000000;
+
+    --solo: 30px;
+    --size0: 50px;
+    /* var(--solo) */
+}
+
+html
+{
+    color: var(--color-white);
+}
+body
+{
+    background-color: var(--color-navy);
+}
+.Navigation_Bar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-size: var(--solo);
+    background-color: var(--color-orange)
+}
+
+.Menu_Options
+{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--color-orange);
+}
+.Title
+{
+    font-size: var(--size0);
+}
+.Drop_Down_Menu     
+{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.Drop_Down_Menu:hover .Menu_Options
+{
+    display: flex;
+}
