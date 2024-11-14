@@ -1,0 +1,17 @@
+
+
+.Container_Info
+{
+    background-color: aquamarine;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Description
+{
+    display: flex;
+    justify-content: left;
+    background-color: rgb(136, 120, 150);
+}
