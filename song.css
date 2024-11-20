@@ -1,13 +1,20 @@
+:root {
+    /*  CUSTOM COLORS - cc  */
+    --color-black: #161616;
+    --color-white: #fff;
+    --color-grey: #e5e5e5;
+    --color-orange: #fca311;
+    --color-navy: #14213d;
+    --color-dark: #000000;
+
+    --width_big: 80vw;
+    --width_small: 20vw;
+    --height-small:50px ;
+}
 
 main
 {
-    background-color: aquamarine;
-
-    display: flex;
-    flex-direction: column;
-
-    /* justify-content: center; */
-    align-items: center;
+    margin-inline: 0 auto;
 }
 .Author
 {
@@ -26,6 +33,6 @@ main
 .Song_Tab
 {
     padding-top: 100px;
-    
+
 
 }
