@@ -12,70 +12,65 @@
     /* var(--solo) */
 }
 
-html
-{
+html {
     padding: 0px;
     color: var(--color-white);
 }
-/* .Navigation_Bar:nth-child(3)
-{
-    background-color: darkred;
-    content: '      ';
-} */
 
-
-.Navigation_Bar
-{
+.Navigation_Bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    
+
     font-size: var(--solo);
 
     background-color: var(--color-orange)
 }
 
-.Menu_Options
-{
+.Menu_Options {
     display: none;
     flex-direction: column;
     position: absolute;
     background-color: var(--color-orange);
 }
-.Title
-{
+
+.Title {
+    size: 50px;
     font-size: var(--size0);
     animation: Fade_Title 2s ease-in forwards infinite, Scale_Title 1s ease-in-out 10s forwards infinite;
 }
 
 
-@keyframes Fade_Title{
+@keyframes Fade_Title {
     50% {
         opacity: 0.6;
     }
 }
-@keyframes Scale_Title{
+
+@keyframes Scale_Title {
     50% {
         transform: scale(0.9);
     }
 }
 
 
-.Drop_Down_Menu     
-{
+.Drop_Down_Menu {
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: left;
 }
 
-.Drop_Down_Menu:hover .Menu_Options
-{
+.Drop_Down_Menu:hover .Menu_Options {
     display: flex;
 }
-main
-{
+
+
+
+main {
+    margin: 0 auto;
+    /* background-color: green ; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,54 +79,58 @@ main
     padding-bottom: 1000px;
     width: 80vw;
 }
-.Search_Bar
+.Text_Info
 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Search_Bar {
     height: 5vh;
     width: 10vw;
     border-radius: 5%;
     cursor: pointer;
-    
+
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
 }
-.Search_Bar:hover, .Search_Bar:focus
-{
+
+.Search_Bar:hover,
+.Search_Bar:focus {
     height: 30px;
     width: 80vw;
 }
 
 
-.Song_List
-{
+.Song_List {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;  
+    justify-content: center;  
 }
-.Song_List a
-{
+
+.Song_List a {
     margin-top: 100px;
     width: 80vw;
 }
-    /* daca maresc se aplica */
-    @media (min-width: 768px) 
-    {
-        .Title
-        {
-            background-color: brown;
-    
-        }
-    
+
+/* daca maresc se aplica */
+@media (min-width: 768px) {
+    .Title {
+        background-color: brown;
+
     }
-    
-    
-    /* daca micsorez se aplica */
-    @media (max-width: 768px) 
-    {
-        .Navigation_Bar
-        {
-            background-color: aqua;        
-            flex-direction: column;
-        }
-    
-    
+
+}
+
+
+/* daca micsorez se aplica */
+@media (max-width: 768px) {
+    .Navigation_Bar {
+        background-color: aqua;
+        flex-direction: column;
     }
+
+
+}
