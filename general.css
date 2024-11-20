@@ -7,15 +7,10 @@
     --color-orange: #fca311;
     --color-navy: #14213d;
     --color-dark: #000000;
-
-    --solo: 30px;
-    --size0: 50px;
-
-
-    /* var(--solo) */
 }
-*{
 
+*{
+    /* tab-size: 15; */
     font-family: Bebas Neue;
     font-size: 30px;
 }
@@ -25,22 +20,21 @@ html
     padding: 0px;
     margin: 0px;
 }
+
 body
 {
     background-color: var(--color-navy);
     padding: 0;
     margin: 0;
     height: 100vh;
-
 }
-/*     ---------------       DIVS       ------------------- */
+/*--------------------Scroll */
 a, .Search_Bar
 {
- 
     animation: Apear;
     animation-timeline: view();
     animation-timing-function: linear;
-    animation-range: entry 0 cover 15%;
+    animation-range: entry 0% cover 30%;
 }
 @keyframes Apear
 {
@@ -49,17 +43,26 @@ a, .Search_Bar
         scale: 0.2;
     }
 }
-/*      --------------       ANCHORS       -----------------     */
+input
+{
+    align-items: center;
+}
 a
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     color: var(--color-navy);
     background-color: var(--color-orange);
 
-    border-radius: 5%;    
+    /* border-radius: 5%;     */
     text-decoration: none;
 
-    transition-duration: 0.5s;
+    transition-duration: 0.1s;
     transition-timing-function: ease-in;
+    /* transition: background-color 0.5s ease-in, color 0.5s ease-out; */
+
 }
 a:hover
 {
@@ -68,6 +71,10 @@ a:hover
     animation-duration: 0.25s;
     animation-timing-function: ease-in-out;
     
+    border-color: #fca311;
+    border-style: solid;
+    border-width: 5px;
+
     background-color: var(--color-navy);
     color: var(--color-orange);   
     /* box-shadow: 0 10px 25px var(--color-black);  */
@@ -85,7 +92,56 @@ a:hover
 footer
 {
     background-color: var(--color-orange);
+    font-size: 20px;
+    color: var(--color-navy);
+    text-align: center;
+}
+
+
+
+.Navigation_Bar {
     display: flex;
-    justify-content: center;
-    align-items:end;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    background-color: var(--color-orange);
+}
+
+.Menu_Options {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--color-orange);
+}
+.Menu_Options a{
+    border-width: 0px;
+}
+
+.Navigation_Bar *{
+    font-size: 40px;
+}
+
+.Title {
+    font-size: 75px;
+    opacity: 0.6;
+    transition: opacity 1s ease-in, transform 3s ease-out 0.5s;
+}
+
+.Title:hover{
+    opacity: 1;
+    transform: scale(0.9);
+}
+
+.Drop_Down_Menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.Drop_Down_Menu:hover{
+    .Menu_Options{
+        display: flex;
+    }
 }
