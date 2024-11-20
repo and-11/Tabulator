@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root {
+    /*  CUSTOM COLORS - cc  */
+    --color-black: #161616;
+    --color-white: #fff;
+    --color-grey: #e5e5e5;
+    --color-orange: #fca311;
+    --color-navy: #14213d;
+    --color-dark: #000000;
+
+    --solo: 30px;
+    --size0: 50px;
+
+
+    /* var(--solo) */
+}
+
+html
+{
+    padding: 0px;
+    font-family: Bebas Neue;
+}
+body
+{
+    background-color: var(--color-navy);
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    /* width: 100vw; */
+}
+/*     ---------------       DIVS       ------------------- */
+a, .Search_Bar
+{
+ 
+    animation: Apear;
+    animation-timeline: view();
+    animation-timing-function: linear;
+    animation-range: entry 0 cover 15%;
+}
+@keyframes Apear
+{
+    0%{
+        opacity: 0;
+        scale: 0.2;
+    }
+}
+/*      --------------       ANCHORS       -----------------     */
+a
+{
+    color: var(--color-navy);
+    background-color: var(--color-orange);
+
+    border-radius: 5%;    
+    text-decoration: none;
+
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+a:hover
+{
+    cursor: pointer;
+    animation: Hover_Link;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-in-out;
+    
+    background-color: var(--color-navy);
+    color: var(--color-orange);   
+    /* box-shadow: 0 10px 25px var(--color-black);  */
+}
+
+@keyframes Hover_Link
+{   
+    80%{
+        scale: 1.1;
+        border-radius: 20%;
+        transform: skew(.05rad);
+    }
+}
+/* ---------------  FOOTER ------------------ */
+footer
+{
+    background-color: var(--color-orange);
+    display: flex;
+    justify-content: center;
+    align-items:end;
+}

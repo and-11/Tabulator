@@ -17,19 +17,21 @@ html
     padding: 0px;
     color: var(--color-white);
 }
-body
+/* .Navigation_Bar:nth-child(3)
 {
-    background-color: var(--color-navy);
-}
+    background-color: darkred;
+    content: '      ';
+} */
+
+
 .Navigation_Bar
 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-
+    
     font-size: var(--solo);
-    padding: 15px;
 
     background-color: var(--color-orange)
 }
@@ -44,7 +46,22 @@ body
 .Title
 {
     font-size: var(--size0);
+    animation: Fade_Title 2s ease-in forwards infinite, Scale_Title 1s ease-in-out 10s forwards infinite;
 }
+
+
+@keyframes Fade_Title{
+    50% {
+        opacity: 0.6;
+    }
+}
+@keyframes Scale_Title{
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+
 .Drop_Down_Menu     
 {
     cursor: pointer;
@@ -63,7 +80,58 @@ main
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    word-spacing: 20px;
     padding-top: 100px;
     padding-bottom: 1000px;
+    width: 80vw;
 }
+.Search_Bar
+{
+    height: 5vh;
+    width: 10vw;
+    border-radius: 5%;
+    cursor: pointer;
+    
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.Search_Bar:hover, .Search_Bar:focus
+{
+    height: 30px;
+    width: 80vw;
+}
+
+
+.Song_List
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Song_List a
+{
+    margin-top: 100px;
+    width: 80vw;
+}
+    /* daca maresc se aplica */
+    @media (min-width: 768px) 
+    {
+        .Title
+        {
+            background-color: brown;
+    
+        }
+    
+    }
+    
+    
+    /* daca micsorez se aplica */
+    @media (max-width: 768px) 
+    {
+        .Navigation_Bar
+        {
+            background-color: aqua;        
+            flex-direction: column;
+        }
+    
+    
+    }
