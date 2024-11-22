@@ -56,3 +56,6 @@ html {
     width: var(--width_big);
     height: var(--height-small);
 }
+.Search_Bar{
+    color: #000000;
+}

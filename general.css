@@ -47,14 +47,14 @@ a, .Search_Bar
     text-shadow: none;   
     animation: Apear;
     animation-timeline: view();
+    animation-range: cover 0% cover 30%;
     animation-timing-function: linear;
-    animation-range: entry 0% cover 30%;
 }
 @keyframes Apear
 {
     0%{
         opacity: 0;
-        scale: 0.2;
+        transform: scale(0.2);
     }
 }
 input
@@ -97,7 +97,7 @@ a:hover
 @keyframes Hover_Link
 {   
     80%{
-        scale: 1.1;
+        transform: scale(1.1);
         border-radius: 20%;
         transform: skew(.05rad);
     }
@@ -186,14 +186,11 @@ main {
     justify-content: left;
 }
 
-.Drop_Down_Menu:hover{
-    .Menu_Options{
+.Drop_Down_Menu:hover .Menu_Options{
         display: flex;
-    }
-    .Options
-    {
-        opacity: 0;
-    }
+}
+.Drop_Down_Menu:hover .Options{
+    opacity: 0; 
 }
 
 /* daca micsorez se aplica */
