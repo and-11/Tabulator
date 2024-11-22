@@ -3,22 +3,25 @@
     --color-black: #161616;
     --color-white: #fff;
     --color-grey: #e5e5e5;
-    --color-orange: #fca311;
-    --color-navy: #14213d;
+    --color-orange: #5E8C5D;
+    --color-navy: #132623;
     --color-dark: #000000;
 
     --width_big: 80vw;
     --width_small: 20vw;
-    --height-small:50px ;
+    --height-small:50px;
+    --shadow-size: 1.5px;
+    --shadow-size-neg:-1.5px;
 }
 
-main
+.Name
 {
-    margin-inline: 0 auto;
+    font-size: 50px;
+
 }
 .Author
 {
-    padding-left: 100px;
+    font-size: 40px;
 }
 
 .Description
@@ -27,12 +30,31 @@ main
     /* justify-content: right; */
     justify-content: flex-start;
     align-items: center;
-    background-color: rgb(235, 229, 239);
+    margin-top: 100px;
 }
 
 .Song_Tab
 {
-    padding-top: 100px;
-
-
+    margin-top: 100px
 }
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 300px;
+}
+
+.Song_Tab div
+{
+    margin: 0 auto;
+    max-width: var(--width_big);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin-bottom: 100px;
+}
+

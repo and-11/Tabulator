@@ -3,13 +3,15 @@
     --color-black: #161616;
     --color-white: #fff;
     --color-grey: #e5e5e5;
-    --color-orange: #fca311;
-    --color-navy: #14213d;
+    --color-orange: #5E8C5D;
+    --color-navy: #132623;
     --color-dark: #000000;
 
     --width_big: 80vw;
     --width_small: 20vw;
-    --height-small:50px ;
+    --height-small:50px;
+    --shadow-size: 1.5px;
+    --shadow-size-neg:-1.5px;
 }
 
 html {
@@ -21,6 +23,8 @@ html {
     flex-direction: column;
     text-indent: 3vw;
 }
+
+
 
 
 
@@ -51,28 +55,4 @@ html {
     margin-top: 100px;
     width: var(--width_big);
     height: var(--height-small);
-}
-
-/* daca maresc se aplica */
-@media (min-width: 768px) {
-    .Title {
-    }
-}
-
-/* daca micsorez se aplica */
-@media (max-width: 768px) {
-    .Navigation_Bar {
-        flex-direction: column;
-    }
-    :root {
-        
-        /* --color-orange: #11fc5b; */
-        --width_big: 90vw;
-    }
-    .Menu_Options {
-        display: none;
-        flex-direction: column;
-        position: relative;
-        background-color: var(--color-orange);
-    }
 }
