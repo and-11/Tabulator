@@ -148,26 +148,6 @@ main {
     justify-content: space-around;
     width: var(--width_big);
 }
-@media (max-width: 768px) {
-    .Navigation_Bar {
-        flex-direction: column;
-    }
-    :root {
-        
-        /* --color-orange: #11fc5b; */
-        --width_big: 90vw;
-    }
-    .Menu_Options {
-        display: none;
-        flex-direction: column;
-        position: relative;
-        background-color: var(--color-orange);
-    }
-    .Song_Tab
-    {
-        overflow: auto;
-    }
-}
 .Title {
     font-size: 75px;
     opacity: 0.6;
@@ -187,10 +167,33 @@ main {
 }
 
 .Drop_Down_Menu:hover .Menu_Options{
-        display: flex;
+    display: flex;
 }
 .Drop_Down_Menu:hover .Options{
     opacity: 0; 
 }
 
+@media (max-width: 768px) {
+    .Navigation_Bar {
+        flex-direction: column;
+    }
+    :root {
+        
+        /* --color-orange: #11fc5b; */
+        --width_big: 90vw;
+    }
+    .Menu_Options {
+        display: none;
+        flex-direction: column;
+        position: relative;
+        background-color: var(--color-orange);
+    }
+    .Song_Tab
+    {
+        overflow: auto;
+    }
+    .Drop_Down_Menu:hover .Options{
+        opacity: 1; 
+    }
+}
 /* daca micsorez se aplica */
