@@ -161,7 +161,7 @@ footer
     }
     .Options
     {
-        display: none;
+        opacity: 0;
     }
 }
 
