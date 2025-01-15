@@ -112,15 +112,19 @@ footer
     text-shadow: none;
 }
 
-
+img{
+    transition: opacity 1s ease;
+}
 
 .Navigation_Bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-
-    background-color: var(--color-orange);
+    width: 100vw;
+    height: 100px;
+    background-color: pink;
+    /* background-color: var(--color-orange); */
 }
 
 .Menu_Options {
@@ -135,6 +139,7 @@ footer
 
 .Navigation_Bar *{
     font-size: 40px;
+    z-index: 3;
 }
 
 main {

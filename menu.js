@@ -2,29 +2,46 @@ function Func() {
     alert('Hello, kitty! Inline event handlers are bad practice. Do not use them!');
 }
 
+function rmPX( x )
+{
+    return Number( x.slice(0,-2) )  ;
+}
 
 function Desen_fundal()
 {
-    alert('1')
+    // alert('1')
     const nota_fundal = document.createElement('img');
     nota_fundal.src = './favicon.ico';
     nota_fundal.alt = 'nota..';
     
-    nota_fundal.width = 300; // Set the width in pixels
-    nota_fundal.height = 200;
+    nota_fundal.style.width = '20px'; // Set the width in pixels
+    nota_fundal.style.height = '30px';
     
-    const randomX = Math.random() * (window.innerWidth - img.width);
-    const randomY = Math.random() * (window.innerHeight - img.height);
+    const nav_bar= document.querySelector(".Navigation_Bar");
+     
+    const nav_bar_computedStyle = window.getComputedStyle(nav_bar)
+    
+    
+    
+    const randomX = Math.random() * ( rmPX( nav_bar_computedStyle.width) - rmPX(nota_fundal.style.width) );
+    const randomY = Math.random() * ( rmPX(nav_bar_computedStyle.height) - rmPX(nota_fundal.style.height) );
+    
+    console.log( randomY );
 
-    // nota_fundal.z-index: 10;
-
+    nota_fundal.style.zIndex= '2';
     nota_fundal.style.position = 'absolute';
     nota_fundal.style.left = `${randomX}px`;
     nota_fundal.style.top = `${randomY}px`;
 
     document.body.appendChild(nota_fundal);
-}
 
+    setTimeout(()=>{
+        nota_fundal.style.opacity = '0';
+        nota_fundal.addEventListener('transitionend', () => {
+            nota_fundal.remove();
+        });
+    }, 1000);
+}
 
 
 window.onload = function()
@@ -35,7 +52,7 @@ window.onload = function()
     
     
     
-     document.querySelector(".Text_Informativ").style.backgroundColor = "pink";
+    //  document.querySelector(".Text_Informativ").style.backgroundColor = "pink";
 }
 
 
