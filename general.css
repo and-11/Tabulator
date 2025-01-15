@@ -123,8 +123,7 @@ img{
     flex-direction: row;
     width: 100vw;
     height: 100px;
-    background-color: pink;
-    /* background-color: var(--color-orange); */
+    background-color: var(--color-orange);
 }
 
 .Menu_Options {

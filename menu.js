@@ -11,7 +11,7 @@ function Desen_fundal()
 {
     // alert('1')
     const nota_fundal = document.createElement('img');
-    nota_fundal.src = './favicon.ico';
+    nota_fundal.src = './cheiafa.png';
     nota_fundal.alt = 'nota..';
     
     nota_fundal.style.width = '20px'; // Set the width in pixels
