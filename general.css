@@ -195,8 +195,17 @@ main {
 .Drop_Down_Menu:hover .Options{
     opacity: 0; 
 }
+#Song_names{
+    text-align: center;
+}
+#Song_img{
+    width: 20vw;
+}
 
 @media (max-width: 900px) {
+    #Song_img{
+        width: 70vw;        
+    }
     .Navigation_Bar {
         flex-direction: column;
     }

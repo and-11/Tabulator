@@ -77,12 +77,8 @@ async function get_song() {
 
     const im = document.querySelector("#Song_img");
     im.setAttribute("src",sg.response.song.header_image_url); 
-    im.style.height= "20vw";
-    im.style.weight= "20vw";
 
-    // = sg.header_image_thumbnail_url
-
-    console.log(sg.response);
+    // console.log(sg.response);
 }
 
 
