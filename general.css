@@ -4,11 +4,11 @@
 
 :root {
     /*  CUSTOM COLORS - cc  */
-    --color-black: #161616;
+    --color-black: #210101;
     --color-white: #fff;
     --color-grey: #e5e5e5;
-    --color-orange: #5E8C5D;
-    --color-navy: #132623;
+    --color-orange: #983351;        /* */
+    --color-navy: #1e2229;        /* */
     --color-dark: #000000;
 
     --width_big: 80vw;
