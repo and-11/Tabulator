@@ -64,13 +64,19 @@ function scrollToEnd() {
 }
 window.onload = function()
 {
-   
+
+    // alert(2);
     const bdy=document.querySelector("body");
     bdy.addEventListener('click', Desen_fundal );
     
     const bt=document.querySelector("#scroll_button");
     bt.addEventListener('click', scrollToEnd );
     
+    
+
+
+
+
     
     //  document.querySelector(".Text_Informativ").style.backgroundColor = "pink";
 }
