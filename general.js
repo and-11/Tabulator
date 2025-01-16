@@ -18,7 +18,7 @@ function Desen_fundal()
     nota_fundal.style.height = '30px';
     
     const nav_bar= document.querySelector(".Navigation_Bar");
-     
+    
     const nav_bar_computedStyle = window.getComputedStyle(nav_bar)
     
     
@@ -26,14 +26,14 @@ function Desen_fundal()
     const randomX = Math.random() * ( rmPX( nav_bar_computedStyle.width) - rmPX(nota_fundal.style.width) );
     const randomY = Math.random() * ( rmPX(nav_bar_computedStyle.height) - rmPX(nota_fundal.style.height) );
     
-
+    
     nota_fundal.style.zIndex= '2';
     nota_fundal.style.position = 'absolute';
     nota_fundal.style.left = `${randomX}px`;
     nota_fundal.style.top = `${randomY}px`;
-
+    
     document.body.appendChild(nota_fundal);
-
+    
     setTimeout(()=>{
         nota_fundal.style.opacity = '0';
         nota_fundal.addEventListener('transitionend', () => {
@@ -42,17 +42,34 @@ function Desen_fundal()
     }, 1000);
 }
 
+function scrollToEnd() {
+    
+    const totalHeight = document.body.scrollHeight; 
+    const duration = 20000;
+    const interval = 10; 
+    const step = totalHeight / (duration / interval);
+    
+    let currentScroll = window.scrollY; 
+    const cs = currentScroll;
 
+    const scrollInterval = setInterval(() => {
+        if (currentScroll < totalHeight - window.innerHeight) {
+            currentScroll += step;
+            window.scrollTo(0, currentScroll);
+        } else {
+            clearInterval(scrollInterval); 
+        }
+    }, interval);
+  
+}
 window.onload = function()
 {
-    const hello_usr=document.querySelector("#helloer");
-    user = localStorage.getItem("user");
-    hello_usr.textContent="Hello "+user+"!";
-
-
+   
     const bdy=document.querySelector("body");
     bdy.addEventListener('click', Desen_fundal );
     
+    const bt=document.querySelector("#scroll_button");
+    bt.addEventListener('click', scrollToEnd );
     
     
     //  document.querySelector(".Text_Informativ").style.backgroundColor = "pink";

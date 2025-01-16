@@ -4,15 +4,6 @@
 
 
 
-modificare de proprietăți
-
-
-folosirea proprietăților classList, target sau currentTarget
-
-
-validarea datelor dintr-un formular folosind expresii regulate
-
-
 cereri Ajax cu preluare date dintr-un fișier json
 
 

@@ -49,13 +49,26 @@ function F_signin()
     else 
     {
         let digits = user.match(/\d/g);
-        if( digits.length >= 2 )
-        {    
-            localStorage.setItem(user,password);
-            show_error.textContent="New account created!";
+        if( digits!=null )
+        {
+
+            if( digits.length >= 2 )
+                {    
+                    if( password!="" )
+                    {
+
+                        localStorage.setItem(user,password);
+                        show_error.textContent="New account created!";
+                    }
+                    else 
+                    {
+                        show_error.textContent="Enter a password....";
+                    }
+                }
         }
         else 
         {
+            alert("asd");
             show_error.textContent="Not enough digits :(";
         }
     }
