@@ -46,6 +46,10 @@ function Desen_fundal()
 
 window.onload = function()
 {
+    const hello_usr=document.querySelector("#helloer");
+    user = localStorage.getItem("user");
+    hello_usr.textContent="Hello "+user+"!";
+
 
     const bdy=document.querySelector("body");
     bdy.addEventListener('click', Desen_fundal );
