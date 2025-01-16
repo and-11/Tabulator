@@ -48,8 +48,16 @@ function F_signin()
     }   
     else 
     {
-        localStorage.setItem(user,password);
-        show_error.textContent="New account created!";
+        let digits = user.match(/\d/g);
+        if( digits.length >= 2 )
+        {    
+            localStorage.setItem(user,password);
+            show_error.textContent="New account created!";
+        }
+        else 
+        {
+            show_error.textContent="Not enough digits :(";
+        }
     }
 }
 

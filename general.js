@@ -26,7 +26,6 @@ function Desen_fundal()
     const randomX = Math.random() * ( rmPX( nav_bar_computedStyle.width) - rmPX(nota_fundal.style.width) );
     const randomY = Math.random() * ( rmPX(nav_bar_computedStyle.height) - rmPX(nota_fundal.style.height) );
     
-    console.log( randomY );
 
     nota_fundal.style.zIndex= '2';
     nota_fundal.style.position = 'absolute';
