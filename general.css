@@ -9,6 +9,7 @@
     --color-dark: #000000;
 
     --width_big: 80vw;
+    --width_med: 40vw;
     --width_small: 20vw;
     --height-small:8.5vh;
     --shadow-size: 1.5px;
@@ -18,7 +19,7 @@
 *{
     /* tab-size: 15; */
     color: #fff;
-    font-family: Bebas Neue;
+    /* font-family: Bebas Neue; */
     font-size: 30px;
     text-shadow:      
         var(--shadow-size-neg) var(--shadow-size-neg) 0 black,
@@ -121,8 +122,7 @@ img{
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    width: 100vw;
-    height: 100px;
+    /* width: 100vw; */
     background-color: var(--color-orange);
 }
 
