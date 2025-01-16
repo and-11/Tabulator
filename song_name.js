@@ -35,7 +35,7 @@ function Desen_fundal()
     document.body.appendChild(nota_fundal);
     
     setTimeout(()=>{
-        nota_fundal.style.opacity = '0';
+        nota_fundal.classList.add("deletion");
         nota_fundal.addEventListener('transitionend', () => {
             nota_fundal.remove();
         });
