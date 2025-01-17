@@ -68,7 +68,7 @@ function F_signin()
         }
         else 
         {
-            alert("asd");
+            // alert("asd");
             show_error.textContent="Not enough digits :(";
         }
     }
